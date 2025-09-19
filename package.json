@@ -1,13 +1,67 @@
 {
-  "name": "@rayners/aoundry-module-types",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "@rayners/foundry-module-types",
+  "version": "0.1.0",
+  "description": "Shared TypeScript declarations for Rayners' suite of Foundry VTT modules.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    },
+    "./seasons-and-stars": {
+      "types": "./dist/seasons-and-stars/index.d.ts"
+    },
+    "./simple-calendar-compat": {
+      "types": "./dist/simple-calendar-compat/index.d.ts"
+    },
+    "./journeys-and-jamborees": {
+      "types": "./dist/journeys-and-jamborees/index.d.ts"
+    },
+    "./realms-and-reaches": {
+      "types": "./dist/realms-and-reaches/index.d.ts"
+    },
+    "./task-and-trigger": {
+      "types": "./dist/task-and-trigger/index.d.ts"
+    },
+    "./errors-and-echoes": {
+      "types": "./dist/errors-and-echoes/index.d.ts"
+    },
+    "./foundry": {
+      "types": "./dist/foundry/index.d.ts"
+    },
+    "./package.json": "./package.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "clean": "rimraf dist",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit --project tsconfig.json",
+    "check": "npm run lint && npm run typecheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rayners/foundry-module-types.git"
+  },
+  "keywords": [
+    "foundry",
+    "typescript",
+    "foundryvtt",
+    "types"
+  ],
+  "author": "Rayner R. <rayners@users.noreply.github.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "rimraf": "^5.0.5",
+    "tslib": "^2.7.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.9.0"
+  }
 }
