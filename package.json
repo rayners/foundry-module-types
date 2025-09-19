@@ -1,7 +1,7 @@
 {
   "name": "@rayners/foundry-module-types",
   "version": "0.1.0",
-  "description": "Shared TypeScript declarations for Rayners' suite of Foundry VTT modules.",
+  "description": "Shared TypeScript declarations for David Raynes' suite of Foundry VTT modules.",
   "type": "module",
   "files": [
     "dist"
@@ -51,7 +51,7 @@
     "foundryvtt",
     "types"
   ],
-  "author": "Rayner R. <rayners@users.noreply.github.com>",
+  "author": "David Raynes <rayners@users.noreply.github.com>",
   "license": "MIT",
   "engines": {
     "node": ">=18"
